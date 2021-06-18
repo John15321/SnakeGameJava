@@ -5,12 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GamePanel.java" afterDir="false" />
     </list>
-    <list id="35d595f7-e52c-4cf8-8c12-d60a47dd35a1" name="Changes by borys" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GamePanel.java" afterDir="false" />
-    </list>
-    <list id="de1f8cae-4da2-4f27-876d-59197d338fb5" name="Changes by Marcin" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/GamePanel.java" afterDir="false" />
-    </list>
+    <list id="35d595f7-e52c-4cf8-8c12-d60a47dd35a1" name="Changes by borys" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,25 +20,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/com/company/GamePanel.java">
-      <ranges>
-        <range start1="9" end1="9" start2="9" end2="10" changelist="517b122c-739d-4c6c-af9b-a5f563ee57fa" />
-        <range start1="10" end1="10" start2="11" end2="21" changelist="35d595f7-e52c-4cf8-8c12-d60a47dd35a1" />
-        <range start1="19" end1="20" start2="30" end2="31" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="55" end1="57" start2="66" end2="69" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="58" end1="64" start2="70" end2="79" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="65" end1="65" start2="80" end2="86" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="96" end1="97" start2="117" end2="122" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="100" end1="100" start2="125" end2="144" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="101" end1="101" start2="145" end2="148" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="104" end1="104" start2="151" end2="154" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="105" end1="105" start2="155" end2="160" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="110" end1="111" start2="165" end2="171" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-        <range start1="116" end1="117" start2="176" end2="198" changelist="de1f8cae-4da2-4f27-876d-59197d338fb5" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="1u5wjteSi7IyuJwTiL0BPpi6qR6" />
   <component name="ProjectView">
@@ -152,7 +128,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623968899268</updated>
-      <workItem from="1623968900753" duration="6603000" />
+      <workItem from="1623968900753" duration="10587000" />
     </task>
     <servers />
   </component>

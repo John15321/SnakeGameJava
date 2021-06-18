@@ -33,7 +33,7 @@ public class GamePanel extends JPanel implements ActionListener {
     int japkoX;
     int japkoY;
     char AiR = 'R'; // kierunek
-    boolean zasuwa = false;
+    static boolean zasuwa = false;
     Timer wunszowyCzasomierz;
     Random rngAleNieTakiDobryJakPanski;
 
@@ -68,16 +68,23 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setColor(Color.cyan); // Cyjan, bo wszyscy chcemy teraz zażyć
             g.fillOval(japkoX, japkoY, JEDNOSC, JEDNOSC);
 
-            for (int i = 0; i < cialo; i++) {
-                if (i == 0) {
-                    g.setColor(Color.black);
-                    g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
-                } else {
-                    //g.setColor(Color.darkGray);
-                    g.setColor(new Color(rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255)));
-                    g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
+            Runnable runnable = () -> {
+                System.out.println("DUPA");
+                for (int i = 0; i < cialo; i++) {
+                    if (i == 0) {
+                        g.setColor(Color.black);
+                        g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
+                    } else {
+                        //g.setColor(Color.darkGray);
+                        g.setColor(new Color(rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255)));
+                        g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
+                        System.out.println("AAAAAA");
+                    }
                 }
-            }
+            };
+            Thread thread = new Thread(runnable);
+            thread.start();
+
             g.setColor(Color.blue);
             g.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
             FontMetrics meter = getFontMetrics(g.getFont());
@@ -151,7 +158,7 @@ public class GamePanel extends JPanel implements ActionListener {
     public void GameOver(Graphics g) {
         g.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
         FontMetrics meter1 = getFontMetrics(g.getFont());
-        g.drawString("Winniczek " + zezarteJapka, (SZEROKUTKI - meter1.stringWidth("Winniczek")) / 2, g.getFont().getSize());
+        g.drawString("Winiczek " + zezarteJapka, (SZEROKUTKI - meter1.stringWidth("Winiczek")) / 2, g.getFont().getSize());
 
 
         g.setColor(Color.blue);
