@@ -35,7 +35,7 @@ public class GamePanel extends JPanel implements ActionListener {
     char AiR = 'R'; // kierunek
     static boolean zasuwa = false;
     Timer wunszowyCzasomierz;
-    Random rngAleNieTakiDobryJakPanski;
+    Random rngAleNieTakiDobryJakPanski; // <3
 
 
     GamePanel() {
@@ -68,23 +68,17 @@ public class GamePanel extends JPanel implements ActionListener {
             g.setColor(Color.cyan); // Cyjan, bo wszyscy chcemy teraz zażyć
             g.fillOval(japkoX, japkoY, JEDNOSC, JEDNOSC);
 
-            Runnable runnable = () -> {
-                System.out.println("DUPA");
-                for (int i = 0; i < cialo; i++) {
-                    if (i == 0) {
-                        g.setColor(Color.black);
-                        g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
-                    } else {
-                        //g.setColor(Color.darkGray);
-                        g.setColor(new Color(rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255)));
-                        g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
-                        System.out.println("AAAAAA");
-                    }
-                }
-            };
-            Thread thread = new Thread(runnable);
-            thread.start();
 
+            for (int i = 0; i < cialo; i++) {
+                if (i == 0) {
+                    g.setColor(Color.black);
+                    g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
+                } else {
+                    //g.setColor(Color.darkGray);
+                    g.setColor(new Color(rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255)));
+                    g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
+                }
+            }
             g.setColor(Color.blue);
             g.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
             FontMetrics meter = getFontMetrics(g.getFont());
@@ -95,8 +89,12 @@ public class GamePanel extends JPanel implements ActionListener {
     }
 
     public void newApple() {
-        japkoX = rngAleNieTakiDobryJakPanski.nextInt((int) (SZEROKUTKI / JEDNOSC)) * JEDNOSC;
-        japkoY = rngAleNieTakiDobryJakPanski.nextInt((int) (WYSOKUTKI / JEDNOSC)) * JEDNOSC;
+        Runnable runnable = () -> {
+            japkoX = rngAleNieTakiDobryJakPanski.nextInt((int) (SZEROKUTKI / JEDNOSC)) * JEDNOSC;
+            japkoY = rngAleNieTakiDobryJakPanski.nextInt((int) (WYSOKUTKI / JEDNOSC)) * JEDNOSC;
+        };
+        Thread thread = new Thread(runnable);
+        thread.start();
     }
 
     public void move() {
