@@ -35,11 +35,11 @@ public class GamePanel extends JPanel implements ActionListener {
     char AiR = 'R'; // kierunek
     static boolean zasuwa = false;
     Timer wunszowyCzasomierz;
-    Random rngAleNieTakiDobryJakPanski; // <3
+    Random losMilionos;
 
 
     GamePanel() {
-        rngAleNieTakiDobryJakPanski = new Random();
+        losMilionos = new Random();
         this.setPreferredSize(new Dimension(SZEROKUTKI, WYSOKUTKI));
         this.setBackground(Color.magenta);
         this.setFocusable(true);
@@ -75,7 +75,7 @@ public class GamePanel extends JPanel implements ActionListener {
                     g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
                 } else {
                     //g.setColor(Color.darkGray);
-                    g.setColor(new Color(rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255), rngAleNieTakiDobryJakPanski.nextInt(255)));
+                    g.setColor(new Color(losMilionos.nextInt(255), losMilionos.nextInt(255), losMilionos.nextInt(255)));
                     g.fillRect(x[i], y[i], JEDNOSC, JEDNOSC);
                 }
             }
@@ -90,11 +90,11 @@ public class GamePanel extends JPanel implements ActionListener {
 
     public void newApple() {
         Runnable runnable = () -> {
-            japkoX = rngAleNieTakiDobryJakPanski.nextInt((int) (SZEROKUTKI / JEDNOSC)) * JEDNOSC;
-            japkoY = rngAleNieTakiDobryJakPanski.nextInt((int) (WYSOKUTKI / JEDNOSC)) * JEDNOSC;
+            japkoX = losMilionos.nextInt((int) (SZEROKUTKI / JEDNOSC)) * JEDNOSC;
+            japkoY = losMilionos.nextInt((int) (WYSOKUTKI / JEDNOSC)) * JEDNOSC;
         };
         Thread thread = new Thread(runnable);
-        thread.start();
+        thread.start(); // nie ma sensu, ale jest
     }
 
     public void move() {
@@ -156,7 +156,7 @@ public class GamePanel extends JPanel implements ActionListener {
     public void GameOver(Graphics g) {
         g.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
         FontMetrics meter1 = getFontMetrics(g.getFont());
-        g.drawString("Winiczek " + zezarteJapka, (SZEROKUTKI - meter1.stringWidth("Winiczek")) / 2, g.getFont().getSize());
+        g.drawString("Winniczek " + zezarteJapka, (SZEROKUTKI - meter1.stringWidth("Winniczek")) / 2, g.getFont().getSize());
 
 
         g.setColor(Color.blue);
